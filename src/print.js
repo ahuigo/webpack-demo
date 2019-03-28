@@ -1,3 +1,3 @@
 export default function printMe() {
-  cosnole.log('I get called from print.js!');
+  consolex.log('Updating..I get called from print.js!');
 }

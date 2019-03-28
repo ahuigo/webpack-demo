@@ -3,14 +3,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+const webpack = require('webpack');
+
 module.exports = {
   entry: {
     app: './src/index.js',
-    print: './src/print.js'
   },
   plugins: [
     new HtmlWebpackPlugin({ title: '管理输出' }),
     new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   output: {
     filename: '[name].bundle.js',
@@ -18,7 +20,8 @@ module.exports = {
     publicPath: '/',
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true,
   },
   devtool: 'inline-source-map',
   module: {
@@ -31,5 +34,5 @@ module.exports = {
       { test: /\.xml$/, use: [ 'xml-loader' ] }
     ]
   },
-  mode: "none",
+  mode: "development",
 };
