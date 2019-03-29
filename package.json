@@ -1,14 +1,14 @@
 {
   "name": "webpack-demo",
   "sideEffects": false,
- "usedExports":false,
+  "usedExports": false,
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server --open",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
     "watch": "webpack --watch"
   },
   "keywords": [],
@@ -27,6 +27,7 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-middleware": "^3.6.1",
     "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
