@@ -1,5 +1,7 @@
 {
   "name": "webpack-demo",
+  "sideEffects": false,
+ "usedExports":false,
   "version": "1.0.0",
   "description": "",
   "private": true,

@@ -9,6 +9,9 @@ module.exports = {
   entry: {
     app: './src/index.js',
   },
+  optimization: {
+    usedExports: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({ title: '管理输出' }),
     new CleanWebpackPlugin(),
@@ -34,5 +37,5 @@ module.exports = {
       { test: /\.xml$/, use: [ 'xml-loader' ] }
     ]
   },
-  mode: "development",
+  mode: 'production',
 };
