@@ -1,14 +1,14 @@
-import { cube } from './math.js';
+function getComponent() {
+  return import(/* webpackChunkName: "lodash" */ 'lodash').then(({ default: _ }) => {
+    var element = document.createElement('div');
 
-function component() {
-  var element = document.createElement('pre');
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-  element.innerHTML = [
-    'Hello webpack!',
-    '5 cubed is equal to ' + cube(5)
-  ].join('\n\n');
+    return element;
 
-  return element;
+  }).catch(error => 'An error occurred while loading the component');
 }
 
-document.body.appendChild(component());
+getComponent().then(component => {
+  document.body.appendChild(component);
+})
