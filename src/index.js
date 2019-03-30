@@ -1,5 +1,6 @@
 import _ from 'lodash';
 
+
 function component() {
   var element = document.createElement('div');
   var button = document.createElement('button');
