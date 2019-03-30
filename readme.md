@@ -20,3 +20,7 @@ Modify src/print.js to see what will happen.
         console.log('Looks like we are in development mode!');
     }
 
+
+# split chunk
+
+    npm run build
