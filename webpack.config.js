@@ -2,8 +2,13 @@
 
     module.exports = {
       entry: './src/index.js',
+    mode:'development',
       output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        filename: 'hello.js',
+        path: path.resolve(__dirname, 'dist'),
+       library: 'hello',
+       //libraryTarget: 'umd',
+       libraryTarget: 'commonjs',
+
       }
     };

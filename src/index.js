@@ -1,7 +1,5 @@
-    function component() {
-        var element = document.createElement('div');
-        element.innerHTML = 'Hello'+ 'webpack';
+import conf from './ref.json';
 
-        return element;
-    }
-    document.body.appendChild(component());
+export default function hello() {
+	console.log(conf)
+}
