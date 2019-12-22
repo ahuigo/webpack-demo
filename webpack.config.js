@@ -1,4 +1,6 @@
     const path = require('path');
+    const CopyPlugin = require('copy-webpack-plugin');
+
 
     module.exports = {
       entry: './src/index.js',
@@ -12,6 +14,10 @@
        //libraryTarget: 'commonjs',
 
       },
+    plugins:[       new CopyPlugin([
+        { from: 'public', to: '.' }
+        ])
+    ],
         /*
         module: {
             rules: [
